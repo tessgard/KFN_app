@@ -1,0 +1,20 @@
+.popup {
+    width: 200px;
+    height: 200px;
+    border-radius: 15px;
+    background-color: var(--main-orange);
+    color: white;
+    padding: 10px;
+    -webkit-box-shadow: 7px 7px 6px -6px rgba(0,0,0,0.47);
+    -moz-box-shadow: 7px 7px 6px -6px rgba(0,0,0,0.47);
+    box-shadow: 7px 7px 6px -6px rgba(0,0,0,0.47);
+    position: absolute;  
+    left: 25%;  
+    right: 25%;  
+    top: 25%;  
+    bottom: 25%; 
+}
+
+.pop-up-container a {
+    color: white;
+}

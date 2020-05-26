@@ -19,7 +19,6 @@
 }
 
 .sub-nav {
-    margin-top: 40px;
     display: flex;
     justify-content: space-evenly;
 }
@@ -29,6 +28,7 @@
     border: none;
     background-color: var(--light-grey);
     border-radius: 15px;
+    width: 200px;
 }
 
 .submit-search-btn {

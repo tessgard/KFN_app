@@ -1,8 +1,10 @@
 import React, { useState, useContext, useEffect } from 'react';
 import AuthContext from '../../context/auth/authContext';
 import AlertContext from '../../context/alert/alertContext';
+import './Register.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCheck } from '@fortawesome/free-solid-svg-icons'
 
-import "./Login.css";
 
 const Login = props => {
     const alertContext = useContext(AlertContext);
@@ -45,14 +47,12 @@ const Login = props => {
     };
   
     return (
-      <div className='form-container'>
-        <h1>
-          Account <span className='text-primary'>Login</span>
-        </h1>
-        <form onSubmit={onSubmit}>
+      <div className='register-main-container'>
+        <form onSubmit={onSubmit} className="form">
           <div className='form-group'>
-            <label htmlFor='email'>Email Address</label>
             <input
+              className="input"
+              placeholder="email"
               id='email'
               type='email'
               name='email'
@@ -62,8 +62,9 @@ const Login = props => {
             />
           </div>
           <div className='form-group'>
-            <label htmlFor='password'>Password</label>
             <input
+              className="input"
+              placeholder="password"
               id='password'
               type='password'
               name='password'
@@ -72,11 +73,12 @@ const Login = props => {
               required
             />
           </div>
-          <input
-            type='submit'
-            value='Login'
-            className='btn btn-primary btn-block'
-          />
+          <div className='login-btn btn-margin-top'>
+            <FontAwesomeIcon icon={faCheck}
+              type='submit'
+              value={<FontAwesomeIcon icon={faCheck}/>}
+            />
+          </div>
         </form>
       </div>
     );
