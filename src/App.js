@@ -5,6 +5,7 @@ import SubNav from './components/layout/SubNav';
 import Home from './components/pages/home'
 import Login from './components/auth/Login'
 import Register from './components/auth/Register'
+import Dashboard from './components/pages/Dashboard'
 import PrivateRoute from './components/routing/PrivateRoute';
 
 
@@ -27,6 +28,7 @@ function App() {
               <Route exact path='/' component={Home}/>
               <Route exact path='/login' component={Login}/>
               <Route exact path='/register' component={Register}/>
+              <PrivateRoute path='/dashboard/' component={Dashboard} />
             </switch>
           </div>
           </Router>

@@ -103,12 +103,12 @@ const Register = props => {
               minLength='6'
             />
           </div>
-          <div className='login-btn btn-margin-top'>
+          <button className='login-btn btn-margin-top'>
             <FontAwesomeIcon icon={faCheck}
               type='submit'
               value={<FontAwesomeIcon icon={faCheck}/>}
             />
-          </div>
+          </button>
           
         </form>
     </div>

@@ -31,12 +31,11 @@ class SubNav extends React.Component {
                 <input className="search-input"></input>
                 <button className="btn submit-search-btn"><FontAwesomeIcon icon={faSearch} /></button>
                 <button onClick={this.togglePopup.bind(this)} className="btn log-in-sign-up-btn">Log in or Sign up</button>
-                    {this.state.showPopup ? 
-                        <PopUpMenu
-                        text='Close Me'
-                        closePopup={this.togglePopup.bind(this)}
-                        />
-                        : null}
+                {this.state.showPopup ? 
+                    <PopUpMenu
+                    closePopup={this.togglePopup.bind(this)}
+                    />
+                    : null}
             </div>
         );
     }

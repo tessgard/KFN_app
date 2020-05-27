@@ -15,7 +15,7 @@ const Login = props => {
   
     useEffect(() => {
       if (isAuthenticated) {
-        props.history.push('/');
+        props.history.push('/dashboard');
       }
   
       if (error === 'Invalid Credentials') {
@@ -73,12 +73,12 @@ const Login = props => {
               required
             />
           </div>
-          <div className='login-btn btn-margin-top'>
+          <button className='login-btn btn-margin-top'>
             <FontAwesomeIcon icon={faCheck}
               type='submit'
               value={<FontAwesomeIcon icon={faCheck}/>}
             />
-          </div>
+          </button>
         </form>
       </div>
     );

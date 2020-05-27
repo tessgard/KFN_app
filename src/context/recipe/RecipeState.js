@@ -28,7 +28,7 @@ const RecipeState = props => {
   // Get Recipes
   const getRecipes = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/recipes');
+      const res = await axios.get('/api/recipes');
 
       dispatch({
         type: GET_RECIPES,
@@ -51,7 +51,7 @@ const RecipeState = props => {
     };
 
     try {
-      const res = await axios.post('http://localhost:5000/api/recipes', recipe, config);
+      const res = await axios.post('/api/recipes', recipe, config);
 
       dispatch({
         type: ADD_RECIPE,
@@ -68,7 +68,7 @@ const RecipeState = props => {
   // Delete Recipe
   const deleteRecipe = async id => {
     try {
-      await axios.delete(`http://localhost:5000/api/recipes/${id}`);
+      await axios.delete(`/api/recipes/${id}`);
 
       dispatch({
         type: DELETE_RECIPE,
@@ -92,7 +92,7 @@ const RecipeState = props => {
 
     try {
       const res = await axios.put(
-        `http://localhost:5000/api/recipes/${recipe._id}`,
+        `/api/recipes/${recipe._id}`,
         recipe,
         config
       );
