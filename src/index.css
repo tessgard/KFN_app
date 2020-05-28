@@ -1,9 +1,9 @@
 :root {
   --light-pink: #F1CECE;
+  --pink: rgb(235, 151, 151);
   --grey: #b1b1b1;
   --light-grey: #F6F6F6;
   --main-orange: #DB8C17;
-
 }
 
 body {
@@ -15,9 +15,33 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+h3 {
+  margin: 0;
+  font-weight: 500;
+
+}
+
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.center {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .btn {
@@ -31,4 +55,12 @@ code {
   -moz-box-shadow: 7px 7px 6px -6px rgba(0,0,0,0.47);
   box-shadow: 7px 7px 6px -6px rgba(0,0,0,0.47);
   cursor: pointer;
+}
+
+.seperator {
+  width: 100%;
+  border-top: 2pt solid var(--light-grey);
+  margin-bottom: 20px;
+  margin-top: 20px;
+
 }

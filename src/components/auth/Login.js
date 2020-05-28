@@ -48,6 +48,11 @@ const Login = props => {
   
     return (
       <div className='register-main-container'>
+        <div className="auth-logo">
+          <a href="/">
+              <img className="logo" src={require('../../assets/kfn-white-logo.png')}></img>
+          </a>        
+        </div>
         <form onSubmit={onSubmit} className="form">
           <div className='form-group'>
             <input

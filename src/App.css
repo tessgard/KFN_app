@@ -1,6 +1,5 @@
 .main-app-container {
-    margin-top: 30px;
-    margin-bottom: 30px;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;

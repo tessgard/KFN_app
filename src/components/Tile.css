@@ -1,9 +1,6 @@
 .tile-container img {
     max-width: 160px;
     border-radius: 15px;
-    -webkit-box-shadow: 7px 7px 6px -6px rgba(0,0,0,0.47);
-    -moz-box-shadow: 7px 7px 6px -6px rgba(0,0,0,0.47);
-    box-shadow: 7px 7px 6px -6px rgba(0,0,0,0.47);
 }
 
 .tile-container {
@@ -26,12 +23,8 @@
     padding: 6px;
     background-color: white;
     padding-bottom: 10px;
-    border: 1pt solid pink;
     width: 150px;
     border-radius: 15px;
-    -webkit-box-shadow: 7px 7px 6px -6px rgba(0,0,0,0.47);
-    -moz-box-shadow: 7px 7px 6px -6px rgba(0,0,0,0.47);
-    box-shadow: 7px 7px 6px -6px rgba(0,0,0,0.47);
 }
 
 .tile-details h2 {

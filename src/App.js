@@ -1,7 +1,5 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import Nav from './components/layout/Navbar';
-import SubNav from './components/layout/SubNav';
 import Home from './components/pages/home'
 import Login from './components/auth/Login'
 import Register from './components/auth/Register'
@@ -22,8 +20,6 @@ function App() {
         <AlertState>
           <Router>
           <div className="main-app-container">
-            <Nav/>
-            <SubNav location={window.location}/>
             <switch>
               <Route exact path='/' component={Home}/>
               <Route exact path='/login' component={Login}/>
