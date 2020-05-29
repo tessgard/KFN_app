@@ -50,10 +50,7 @@ code {
   margin-right: 5px;
   border-radius: 15px;
   background-color: white;
-  border: 1pt solid black;
-  -webkit-box-shadow: 7px 7px 6px -6px rgba(0,0,0,0.47);
-  -moz-box-shadow: 7px 7px 6px -6px rgba(0,0,0,0.47);
-  box-shadow: 7px 7px 6px -6px rgba(0,0,0,0.47);
+  border: none;
   cursor: pointer;
 }
 
