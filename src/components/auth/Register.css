@@ -65,3 +65,9 @@
 .btn-margin-top {
     margin-top: 20px;
 }
+
+.sign-up-login-redirect {
+    margin-top: 40px;
+    font-size: 11px;
+    color: white;
+}

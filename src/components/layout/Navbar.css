@@ -38,29 +38,28 @@
 }
 
 .search-input {
-    margin-right: 10px;
+    margin-right: 5px;
     border: none;
     background-color: var(--light-grey);
     border-radius: 15px;
-    width: 30%;
+    max-width: 100%;
+    min-width: 40%;
 }
 
 .submit-search-btn {
     box-shadow: none;
     width: 40px;
     height: 40px;
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
+    margin-right: 20px;
     border-radius: 50%;
-    border: 1pt solid var(--light-pink);
-    background-color: var(--light-grey);
+    background-color: var(--light-pink);
 }
 
 .log-in-sign-up-btn {
     color: var(--main-orange);
     border: 1pt solid var(--main-orange);
     font-size: medium;
-    min-width: 150px;
+    min-width: 80px;
 }
 
 .log-in-sign-up-btn:hover {
@@ -68,7 +67,8 @@
     border: 1pt solid var(--main-orange);
     background-color: var(--main-orange);
     font-size: medium;
-    min-width: 150px;
+    min-width: 80px;
+    font-weight: 600;
 }
 
 .logout-btn {

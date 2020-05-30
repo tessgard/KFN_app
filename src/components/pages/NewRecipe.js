@@ -2,17 +2,20 @@ import React, { useState, useContext, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCheck } from '@fortawesome/free-solid-svg-icons'
 import RecipeContext from '../../context/recipe/recipeContext';
+import AuthContext from '../../context/auth/authContext';
 
 import Nav from '../layout/Navbar';
 
 import './NewRecipe.css'
 
 const NewRecipe = () => {
-    const recipeContext = useContext(RecipeContext);
+    const recipeContext = useContext(RecipeContext)
+    const authContext = useContext(AuthContext)
 
     const { addRecipe, updateRecipe, clearCurrent, current } = recipeContext;
   
     useEffect(() => {
+      authContext.loadUser()
       if (current !== null) {
         setRecipe(current);
       } else {

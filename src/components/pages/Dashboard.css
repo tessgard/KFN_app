@@ -12,54 +12,27 @@
     margin: 0;
 }
 
-.dash-content-right h3 {
+.dash-content-mid h3 {
     margin: 0;
     color: var(--main-orange);
 }
 
-.user-greeting {
-    color: var(--grey);
-    position: absolute;  
-    top: 10px;  
-    margin: 0;
-    padding: 15px;
-}
-
 .dash-content {
     width: 100%;
-    height: 100vh;
     margin-top: 30px;
     display: flex;
     justify-content: center;
 }
 
-.dash-content-left {
-    width: 25%;
-    padding: 2%;
-    border-radius: 15px;
-    background-color: var(--light-grey);
-    overflow: scroll;
-}
-
-.dash-content-left h2 {
-    margin: 0;
-    color: var(--main-orange);
-}
-
-.dash-content-right{
-    background-color: white;
+.dash-content-mid{
     box-sizing: border-box;
     border-radius: 15px;
-    width: 71%;
     padding: 2%;
     margin-left: 2%;
     margin-right: 2%;
-    overflow: scroll;
 }
 
-
-
-.dash-content-right a {
+.dash-content-mid a {
     color: white;
     margin-bottom: 5px;
 }

@@ -1,47 +1,52 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import "./Navbar.css";
-import { LOGOUT } from '../../context/types';
+import AuthContext from '../../context/auth/authContext'
 
 
-class Nav extends React.Component {
-    constructor() {
-        super();
-        this.state = {
-        showMenu: false
-        };
+const Nav = () => {
+
+    const authContext = useContext(AuthContext)
+
+    const onLogout = () => {
+        authContext.logout()
     }
-    toggleMenu() {
-        this.setState({
-            showMenu: !this.state.showMenu
-        });
-    }
-    render() {
 
-        const { location } = this.props;
-        return(
-            <div className="nav-container">
-                <a href='#' onClick={this.toggleMenu.bind(this)} className="ham-menu">
-                    <div className="ham-bar"></div>
-                    <div className="ham-bar"></div>
-                    <div className="ham-bar"></div>
-                </a>    
-                {this.state.showMenu ? 
-                    <div className="ham-popup-menu">
-                    <span className="menu-item"><a href="/">Home</a></span>
-                    <span className="menu-item"><a href="/">Update profile</a></span>
-                    <span className="menu-item"><a href="/">Add new recipe</a></span>
-                    <span className="menu-item"><a href="/dashboard">Dashboard</a></span>
-                    <span className="menu-item"><a href="#">Logout</a></span>
-                </div>
-                    : null}                
-                <div className="nav-content">
-                    <a href="/">
-                        <img className="logo" src={require('../../assets/kfn-orange-logo.png')}></img>
-                    </a>
-                </div>
+    const popMenu = (
+        <div className="ham-popup-menu">
+            <span className="menu-item"><a href="/">Home</a></span>
+            <span className="menu-item"><a href="/dashboard">Update profile</a></span>
+            <span className="menu-item"><a href="/newrecipe">Add new recipe</a></span>
+            <span className="menu-item"><a href="/dashboard">Dashboard</a></span>
+            <span className="menu-item"><a onClick={onLogout} href="#">Logout</a></span>
+        </div>
+    )
+
+    return(
+        <div className="nav-container">
+            <a href='#' onClick={popMenu} className="ham-menu">
+                <div className="ham-bar"></div>
+                <div className="ham-bar"></div>
+                <div className="ham-bar"></div>
+            </a>    
+           
+            <div className="ham-popup-menu">
+                <span className="menu-item"><a href="/">Home</a></span>
+                <span className="menu-item"><a href="/dashboard">Update profile</a></span>
+                <span className="menu-item"><a href="/newrecipe">Add new recipe</a></span>
+                <span className="menu-item"><a href="/dashboard">Dashboard</a></span>
+                <span className="menu-item"><a onClick={onLogout} href="#">Logout</a></span>
             </div>
-        )
-    }
+
+            
+                
+                                
+            <div className="nav-content">
+                <a href="/">
+                    <img className="logo" src={require('../../assets/kfn-orange-logo.png')}></img>
+                </a>
+            </div>
+        </div>
+    )
 }
 
 export default Nav;

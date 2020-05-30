@@ -3,42 +3,25 @@ import AuthContext from '../../context/auth/authContext';
 import AlertContext from '../../context/alert/alertContext';
 import Nav from '../layout/Navbar';
 
-import BlogTile from '../BlogTile'
 import Tile from '../Tile'
 import './Dashboard.css'
 
-const Dashboard = props => {
+const Dashboard = () => {
 
-    const alertContext = useContext(AlertContext);
     const authContext = useContext(AuthContext);
-  
-    const { setAlert } = alertContext;
-    const { error, clearErrors, isAuthenticated } = authContext;
-  
+    
     useEffect(() => {
-      if (isAuthenticated) {
-        props.history.push('/dashboard');
-      }
-  
-      if (error === 'Invalid Credentials') {
-        setAlert(error, 'danger');
-        clearErrors();
-      }
-    }, [error, isAuthenticated, props.history]);
+      authContext.loadUser()
+      
+      // eslint-disable-next-line
+    }, []);
 
     return (
       <>
         <Nav/>
         <div className="main-dashboard-container">
           <div className="dash-content">
-            <div className="dash-content-left">
-              <h3>From the blog</h3>
-              <BlogTile/>
-              <BlogTile/>
-              <BlogTile/>
-
-            </div>
-            <div className="dash-content-right">
+            <div className="dash-content-mid">
                 <h3>New for you</h3>
               <div className="dash-index-container">
                 <Tile/>

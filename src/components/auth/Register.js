@@ -14,7 +14,7 @@ const Register = props => {
 
   useEffect(() => {
     if (isAuthenticated) {
-      props.history.push('/');
+      props.history.push('/dashboard');
     }
 
     if (error === 'User already exists') {
@@ -52,6 +52,11 @@ const Register = props => {
 
   return (
     <div className="register-main-container">
+      <div className="auth-logo">
+        <a href="/">
+            <img className="logo" src={require('../../assets/kfn-white-logo.png')}></img>
+        </a>        
+      </div>
         <form onSubmit={onSubmit} className="form">
           <div className='form-group'>
             <input
@@ -109,8 +114,9 @@ const Register = props => {
               value={<FontAwesomeIcon icon={faCheck}/>}
             />
           </button>
-          
         </form>
+        <a href="/login"className="sign-up-login-redirect">Already have an account? Log in here</a>
+
     </div>
   );
 };

@@ -85,6 +85,7 @@ const Login = props => {
             />
           </button>
         </form>
+        <a href="/register"className="sign-up-login-redirect">Don't have an account? Sign up here</a>
       </div>
     );
   };
