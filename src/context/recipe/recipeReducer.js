@@ -22,7 +22,7 @@ import {
       case ADD_RECIPE:
         return {
           ...state,
-          recipes: [...state.recipes, action.payload],
+          recipes: [action.payload],
           loading: false
         };
       case UPDATE_RECIPE:
