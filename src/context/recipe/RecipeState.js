@@ -17,7 +17,7 @@ import {
 
 const RecipeState = props => {
   const initialState = {
-    recipes: null,
+    recipes: [],
     current: null,
     filtered: null,
     error: null

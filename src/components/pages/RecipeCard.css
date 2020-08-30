@@ -1,0 +1,16 @@
+.recipe-main {
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 10px;
+    background-color: white;
+    border: 2pt solid var(--light-grey);
+    padding: 10px;
+    border-radius: 15px;
+    min-width: 300px;
+    min-height: 400px;
+}
