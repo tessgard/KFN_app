@@ -3,6 +3,7 @@ import AuthContext from '../../context/auth/authContext'
 import AlertContext from '../../context/alert/alertContext'
 import RecipeContext from '../../context/recipe/recipeContext'
 import Nav from '../layout/Navbar'
+import SubNav from '../layout/SubNav';
 
 import Tile from '../Tile'
 import Spinner from '../layout/Spinner'
@@ -21,7 +22,15 @@ const Dashboard = () => {
     }, []);
 
     if (recipes !== null && recipes.length === 0 && !loading) {
-      return <p>loading</p>
+      return(
+        <>
+        <Nav/>
+        <SubNav location={window.location}/>
+          <div className="main-index-container">
+          <p>You don't have any recipes yet</p>
+        </div>
+      </>
+      )
     }
 
     return (

@@ -21,7 +21,15 @@ const Home = () => {
   }, [])
 
   if (recipes !== null && recipes.length === 0 && !loading) {
-    return <p>loading</p>
+    return (
+      <>
+      <Nav/>
+      <SubNav location={window.location}/>
+        <div className="main-index-container">
+        <p>You don't have any recipes yet</p>
+      </div>
+    </>
+    )
   }
 
     return (
